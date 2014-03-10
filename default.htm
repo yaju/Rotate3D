@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>3D回転  射影変換(ホモグラフィ)</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+<body>
+    <div id="controler">
+        <input type="checkbox" id="rotateX">
+        <label for="rotateX">X</label>
+        <input type="checkbox" checked id="rotateY">
+        <label for="rotateY">Y</label>
+        <input type="checkbox" id="rotateZ">
+        <label for="rotateZ">Z</label>
+        theta: <input type="range" value="0" min="0" max="360" id="theta" />
+        <span id="thetaDisp">0</span>
+        <input type="checkbox" id="loop">
+        <label for="loop">Loop</label><br />
+        drawStyle:
+        <input type="radio" name="drawStyle" value="Nearest" checked="checked" />Nearest
+        <input type="radio" name="drawStyle" value="Bilinear" />Bilinear
+        <input type="checkbox" checked id="preserve3D">
+        <label for="preserve3D">Preserve3D</label><br />
+        <input type="checkbox" checked id="frontlogo">
+        <label for="frontlogo">Frontlogo(MDN)</label>
+        <input type="checkbox" checked id="backlogo">
+        <label for="backlogo">Backlogo(HTML5)</label><br /><br />
+    </div>
+    <canvas id="ctx"></canvas><br />
+    <canvas id="ctx2" style="visibility:hidden"></canvas>
+    <script src="http://glmatrix.googlecode.com/files/glMatrix-0.9.5.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
