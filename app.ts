@@ -749,7 +749,7 @@ class Rotate3DApp {
     onFrame() {
         var loop: HTMLInputElement = <HTMLInputElement>document.getElementById("loop");
         if (loop.checked) {
-            this.theta++;
+            this.theta += 4;    // 遅いので+4に変更
             this.theta %= 360;
             this.render();
         }
